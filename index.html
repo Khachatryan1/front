@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>homework 20</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="left-side">
+            <div id="registration">
+                <p>Registration</p>
+                <div class="form-control">
+                    <input id="name"
+                           type="text" 
+                           required=""
+                           onfocusout="checkEmptyField(this, '.error-message')">
+                    <label>
+                        <span style="transition-delay:0ms">N</span><span style="transition-delay:50ms">A</span><span style="transition-delay:100ms">M</span><span style="transition-delay:150ms">E</span>
+                    </label>
+                    <p class="error-message"></p>
+                </div>
+                <div class="form-control">
+                    <input id="surname"
+                           type="text" 
+                           required=""
+                           onfocusout="checkEmptyField(this, '.error-message')">
+                    <label>
+                        <span style="transition-delay:0ms">S</span><span style="transition-delay:50ms">U</span><span style="transition-delay:100ms">R</span><span style="transition-delay:150ms">N</span><span style="transition-delay:200ms">A</span><span style="transition-delay:250ms">M</span><span style="transition-delay:300ms">E</span>
+                    </label>
+                    <p class="error-message"></p>
+                </div>
+                <div class="form-control">
+                    <input id="age" 
+                           type="number" 
+                           required=""
+                           onfocusout="checkEmptyField(this, '.error-message')">
+                    <label>
+                        <span style="transition-delay:0ms">A</span><span style="transition-delay:50ms">G</span><span style="transition-delay:100ms">E</span>
+                    </label>
+                    <p class="error-message"></p>
+                </div>
+                <div class="form-control">
+                    <input id="email" 
+                           type="text" 
+                           required=""
+                           onfocusout="checkEmptyField(this, '.error-message')">
+                    <label>
+                        <span style="transition-delay:0ms">E</span><span style="transition-delay:50ms">M</span><span style="transition-delay:100ms">A</span><span style="transition-delay:150ms">I</span><span style="transition-delay:200ms">L</span>
+                    </label>
+                    <p class="error-message"></p>
+                </div>
+                <button id="create-button" onclick="main()">CREATE</button>
+                <div id="loading-container">
+                    <div id="progres">
+                        <span id="progres-value">0%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="right">
+            <div class="right-header">
+                <div>
+                    <p>ID</p>
+                </div>
+                <div>
+                    <p>NAME</p>
+                    <input id="search-name"
+                           class="search" 
+                           type="text" 
+                           oninput="sortByValue()">
+                </div>
+                <div>
+                    <p>SURNAME</p>
+                    <input id="search-surname" 
+                           class="search search-surname" 
+                           type="text" 
+                           oninput="sortByValue()">
+                </div>
+                <div>
+                    <p>AGE</p>
+                    <input id="search-age"
+                           class="search" 
+                           type="text" 
+                           oninput="sortByValue()">
+                </div>
+                <div>
+                    <p>EMAIL</p>
+                </div>
+            </div>
+            <div id="right-main"></div> 
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
